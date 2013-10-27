@@ -19,7 +19,7 @@ file_name = victim + "_" + ports;
 nmap_cmd_line_args = "nmap -oG " + file_name + " -sV -p" + ports + " " + victim + ">" + file_name + ".txt" # content not allowed in xml prolog...out here
 os.system("rm " + file_name + ".txt") # keep working directory clean
 
-os.system(nmap_cmd_line_args); # run it in terminal
+os.system(nmap_cmd_line_args); # call os and run
 
 # open output file of nmap
 f = open(file_name)

@@ -11,7 +11,7 @@ m_ent = MaltegoTransform();
 m_ent.parseArguments(sys.argv);
 
 ports = "21-25" # m_ent.getVar("ports"); # Eventually define top to take port numbers 
-victim = "192.168.161.129" # m_ent.getValue(); # Eventually define this to take IP address values/domains, using metasploitable for now
+victim = "192.168.161.129" # m_ent.getVar(); # Eventually define this to take IP address values/domains, using metasploitable for now
 
 file_name = victim + "_" + ports;
 
@@ -19,7 +19,7 @@ file_name = victim + "_" + ports;
 nmap_cmd_line_args = "nmap -oG " + file_name + " -sV -p" + ports + " " + victim + ">" + file_name + ".txt" # content not allowed in xml prolog...out here
 os.system("rm " + file_name + ".txt") # keep working directory clean
 
-os.system(nmap_cmd_line_args); # call os and run
+os.system(nmap_cmd_line_args); # call os and run nmap
 
 # open output file of nmap
 f = open(file_name)
@@ -62,4 +62,3 @@ f.close();
 os.system("rm " + file_name)
 
 m_ent.returnOutput();
-

@@ -1,12 +1,17 @@
 #!/usr/bin/python
 
-### just dumps the info from ns lookup straight out ###
-### needs code to format data, accept more sites ###
+'''
+Easy example of core functions 
+Just dumps every single line of a text file into entities
+'''
+
 import os, sys, time
 from MaltegoTransform import *
 
 m_ent = MaltegoTransform();
 m_ent.parseArguments(sys.argv);
+
+# add logic here to pull from higher entities
 
 site_array = "bu.edu" # eventually take in multiple sites perhaps 
 
@@ -21,7 +26,7 @@ count = 0;
 f = open(file_name)
 for line in f: 
     me_ip = m_ent.addEntity("the_ip", "IP: " + line.strip()) 
-    me_ip = None 
+    me_ip = None  # cascading logic...value that will be pulled by lower transforms
 
 f.close()
 

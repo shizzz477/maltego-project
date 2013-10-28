@@ -26,7 +26,7 @@ count = 0;
 f = open(file_name)
 for line in f: 
     me_ip = m_ent.addEntity("the_ip", "IP: " + line.strip()) 
-    me_ip = None  # cascading logic...value that will be pulled by lower transforms
+    me_ip = "LOL DNS DNS ADDRESS" # cascading logic...value that will be pulled by lower transforms
 
 f.close()
 

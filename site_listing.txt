@@ -5,3 +5,10 @@ Non-authoritative answer:
 Name:	bu.edu
 Address: 128.197.27.7
 
+Server:		127.0.1.1
+Address:	127.0.1.1#53
+
+Non-authoritative answer:
+Name:	bu.edu
+Address: 128.197.27.7
+

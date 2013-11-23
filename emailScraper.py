@@ -28,15 +28,15 @@ def main(argv):
 
     emails = collectAllEmail(html) 
 
-    print emails
+    #print emails
 
-    myfile = open('emails.csv', 'wb')
-    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
-    wr.writerow(emails)
+    #myfile = open('emails.csv', 'wb')
+    #wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    #wr.writerow(emails)
 
     mt = MaltegoTransform();
     for email in emails:
-	    mt.addEntity("maltego.Email", email)
+	    mt.addEntity("maltego.EmailAddress", email)
 
     mt.returnOutput()
 

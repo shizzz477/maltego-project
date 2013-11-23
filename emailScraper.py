@@ -11,7 +11,7 @@ def collectAllEmail(htmlSource):
         email_pattern = re.compile("[-a-zA-Z0-9._]+@[-a-zA-Z0-9_]+.[a-zA-Z0-9_.]+")
         emails = re.findall(email_pattern, htmlSource)
         return emails
-
+#ditto
 def collectEmail( htmlSource):
     "collects all emails that starts with mailto: in the html source string"
     #example: <a href="mailto:t.s@d.com">
@@ -19,14 +19,17 @@ def collectEmail( htmlSource):
     emails = re.findall(email_pattern, htmlSource)
     return emails
 
-url = "http://www.bu.edu/cs/people/directory/";
 
+#set URL
+url = "http://www.bu.edu/cs/people/directory/";
+#grab html
 html = urllib.urlopen(url).read()
 
 emails = collectAllEmail(html) 
 
 print emails
 
+#write to csv file
 myfile = open('emails.csv', 'wb')
 wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
 wr.writerow(emails)

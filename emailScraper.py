@@ -3,6 +3,7 @@ import os
 import re
 import sys
 import csv
+from MaltegoTransform import *
 
 #stolen from http://love-python.blogspot.com/2008/04/python-code-to-scrape-email-address.html
 def collectAllEmail(htmlSource):
@@ -32,6 +33,12 @@ def main(argv):
     myfile = open('emails.csv', 'wb')
     wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
     wr.writerow(emails)
+
+    mt = MaltegoTransform();
+    for email in emails:
+	    mt.addEntity("maltego.Email", email)
+
+    mt.returnOutput()
 
 
 if __name__ == "__main__": main(sys.argv)

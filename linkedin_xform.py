@@ -24,4 +24,6 @@ def main(argv):
 	mt.returnOutput()
 
 
-	if __name__ == "__main__": main(sys.argv)
+
+
+if __name__ == "__main__": main(sys.argv)

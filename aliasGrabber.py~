@@ -17,7 +17,7 @@ def collectEmail( htmlSource):
     "collects all emails that starts with mailto: in the html source string"
     #example: <a href="mailto:t.s@d.com">
     email_pattern = re.compile("<a\s+href=\"mailto:([a-zA-Z0-9._@]*)\">", re.IGNORECASE)
-    emails = re.findall(email_pattern, alias)
+    emails = re.findall(email_pattern, htmlSource)
     return emails
 
 
@@ -38,7 +38,7 @@ def main(argv):
     for email in emails:
         index = email.find('@');
         alias = email[:index]
-        mt.addEntity("maltego.Alias", alias)
+        mt.addEntity("maltego.EmailAddress", alias)
 
     mt.returnOutput()
 

@@ -66,7 +66,37 @@ def searchUser(user, num=200):
 	p_tweets = json.loads(tweets[0])
 
 	return p_tweets
-	
+
+def getFollowers(user):
+	url = "https://api.twitter.com/1.1/followers/ids.json?cursor=-1&" + user + "=sitestreams&count=5000"
+	parameters = []	
+	response = twitterreq(url, "GET", parameters)
+  	tweets = []
+
+ 
+  	for line in response:    
+		tweet = (line.strip())
+		tweets.append(tweet)
+    
+	p_tweets = json.loads(tweets[0])
+
+	return p_tweets	
+
+def idToUsername(searchString):
+  url = "https://api.twitter.com/1.1/users/lookup.json?user_id=" + searchString
+  parameters = []	
+  response = twitterreq(url, "GET", parameters)
+  tweets = []
+
+ 
+  for line in response:    
+    tweet = (line.strip())
+    tweets.append(tweet)
+    
+    p_tweets = json.loads(tweets[0])
+
+    return p_tweets	
+
 
 def search(topic, debug=False):
   url = "https://api.twitter.com/1.1/search/tweets.json?q="+topic

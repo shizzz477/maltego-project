@@ -1,0 +1,6 @@
+import twitterSearch
+
+
+users = twitterSearch.getUserFollowers("tab262");
+
+print users

@@ -9,6 +9,8 @@ from MaltegoTransform import *
 
 m_ent = MaltegoTransform();
 m_ent.parseArguments(sys.argv);
+m_ent.getValue();
+
 
 ports = "20-25,80,6789"
 victim = sys.argv[1] # ip address of victim  

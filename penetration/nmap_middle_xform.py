@@ -41,12 +41,13 @@ for line in f:
                 service = "N/A"
 
             # show them in maltego ui
-            me_serv = m_ent.addEntity("Scanned_Ports", "PORT: " + port_num + " is " + is_open + "\n"  + " SERVICE: " + service);
+            me_serv = m_ent.addEntity("jf.SuperFunTransforms", "PORT: " + port_num + " is " + is_open + "\n"  + " SERVICE: " + service);
+            me_serv.setType("jf.SuperFunTransforms")
             me_serv.addAdditionalFields("port", "Port", None, port_num) 
             me_serv.addAdditionalFields("protocol", "Protocol", None, protocol)
             me_serv.addAdditionalFields("service",  "Service", None, service)
             me_serv.addAdditionalFields("banner", "Banner", None, banner)
-            me_serv = None
+            me_serv.addAdditionalFields("opening", "Open?", None, is_open)
 
 f.close();
 os.system("rm " + file_name)

@@ -4,6 +4,7 @@
 Easy example of core functions 
 Just dumps every single line of a text file into entities
 '''
+
 import os, sys, time
 from MaltegoTransform import *
 m_ent = MaltegoTransform();
@@ -14,6 +15,8 @@ file_name = "site_listing.txt"
 os_pass = ("nslookup " + site_array + ">>" + file_name)
 os.system(os_pass)
 count = 0;
+
+
 f = open(file_name)
 for line in f: 
     me_ip = m_ent.addEntity("the_ip", "IP: " + line.strip()) 

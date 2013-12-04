@@ -15,8 +15,6 @@ def main(argv):
 	else:	
 		users = twitterSearch.getFollowers(argv[1]);
 		if(DEBUG): print users
-
-	
 		searchString = ''
 		for i in range(len(users['users'])):
 			searchString += str(users['users'][i]['id']) + ','

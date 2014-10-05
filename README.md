@@ -15,3 +15,4 @@ Exploration of the open-source intelligence tool Maltego. Included are a templat
 
 ## Misc. Information:
 - Take a look at the other transforms, but be sure to define your entity types when plugging them into Maltego
+- MaltegoTransform.py is Paterva's python API for local transforms

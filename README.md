@@ -10,7 +10,7 @@ Exploration of the open-source intelligence tool Maltego. Included are a templat
 4. After entering basic info. and linking to created entity type, link to python interpreter location, e.g. /usr/bin/python
  
 ## YouTube Tutorial
-[YouTube Tutorial](http://http://youtu.be/5mPVTOFe3E8)
+[YouTube Tutorial](http://youtu.be/5mPVTOFe3E8)
 - toy\_xform.py is the basic local transform you're looking for, add it as your own entity and enjoy experimenting
 
 ## Misc. Information:

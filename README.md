@@ -13,6 +13,5 @@ Maltego Project
 - toy\_xform.py is the basic local transform you're looking for, add it as your own entity type and enjoy experimenting
 
 ## Misc. Information:
-- take a look at the other transforms, but be sure to define your entity types when plugging them into Maltego
-- email scraper will use emails.csv, will 
+- Take a look at the other transforms, but be sure to define your entity types when plugging them into Maltego
 

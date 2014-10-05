@@ -1,5 +1,6 @@
 Maltego Project
 ===============
+This is a project exploring the open-source intelligence tool Maltego. This is a bit of a documentation of a learning experience and includes a variety of Python files for users to get up and running with the tool. Included is a template file for local transforms, some basic penetration testing transforms, and a few basic social engineering transforms to demonstrate the capabilities of Maltego
 
 ## Local Transforms:
 
